@@ -15,7 +15,7 @@
 
 Canvas is a fully open source package to extend your existing [Laravel](https://laravel.com) application and get you up-and-running with a blog in just a few minutes. In addition to a distraction-free writing experience, you can view monthly trends on your content, get insights into reader traffic and more!
 
-## Updated
+## Fork Changes ***
 
 This fork basically was created to change the canvas package to use auto-incrementing User ID rather then the default UUID. I found it easier to do this in order to keep to the default Laravel MySQL database setup.
 
