@@ -35,7 +35,7 @@ composer require austintoddj/canvas
 
 Publish the assets and primary configuration file using the `canvas:install` Artisan command:
 
-NOTE: Before running the below, please make sure your `.env` file is updated and using your prefered database driver. By default, canvas will use `sqlite` database to create a new user.
+NOTE: Before running the below command, please make sure your `.env` file is updated and using your prefered database driver. By default, canvas will use `sqlite` database to create a new user.
 
 ```bash
 php artisan canvas:install
