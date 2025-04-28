@@ -82,7 +82,6 @@ class UserControllerTest extends TestCase
     public function testStoreNewUser(): void
     {
         $data = [
-            'id' => Uuid::uuid4()->toString(),
             'name' => 'Name',
             'email' => 'email@example.com',
             'password' => 'password',
@@ -101,14 +100,12 @@ class UserControllerTest extends TestCase
     public function testDeletedUsersCanBeRefreshed(): void
     {
         $deletedUser = factory(User::class)->create([
-            'id' => Uuid::uuid4()->toString(),
             'name' => 'Deleted User',
             'email' => 'email@example.com',
             'deleted_at' => now(),
         ]);
 
         $data = [
-            'id' => Uuid::uuid4()->toString(),
             'name' => 'Deleted User',
             'email' => 'email@example.com',
             'password' => 'password',
@@ -150,7 +147,6 @@ class UserControllerTest extends TestCase
     public function testInvalidPasswordCombinationsAreValidated(): void
     {
         $data = [
-            'id' => Uuid::uuid4()->toString(),
             'name' => 'Name',
             'email' => 'email@example.com',
             'password' => 'password',
@@ -170,7 +166,6 @@ class UserControllerTest extends TestCase
     public function testShortPasswordsAreValidated(): void
     {
         $data = [
-            'id' => Uuid::uuid4()->toString(),
             'name' => 'Name',
             'email' => 'email@example.com',
             'password' => 'pass',

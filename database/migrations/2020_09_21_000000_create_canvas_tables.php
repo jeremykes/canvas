@@ -83,7 +83,7 @@ class CreateCanvasTables extends Migration
         });
 
         Schema::create('canvas_users', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->increments('id')->primary();
             $table->string('name');
             $table->string('email')->unique();
             $table->string('username')->unique()->nullable();

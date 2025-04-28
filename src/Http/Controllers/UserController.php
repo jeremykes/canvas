@@ -26,7 +26,8 @@ class UserController extends Controller
                 ->select('id', 'name', 'email', 'avatar', 'role')
                 ->latest()
                 ->withCount('posts')
-                ->paginate(), 200
+                ->paginate(),
+            200
         );
     }
 
@@ -38,7 +39,6 @@ class UserController extends Controller
     public function create(): JsonResponse
     {
         return response()->json(User::query()->make([
-            'id' => Uuid::uuid4()->toString(),
             'role' => User::CONTRIBUTOR,
         ]), 200);
     }
