@@ -15,6 +15,10 @@
 
 Canvas is a fully open source package to extend your existing [Laravel](https://laravel.com) application and get you up-and-running with a blog in just a few minutes. In addition to a distraction-free writing experience, you can view monthly trends on your content, get insights into reader traffic and more!
 
+## Fork Changes ***
+
+This fork basically was created to change the canvas package to use auto-incrementing User ID rather then the default UUID. I found it easier to do this in order to keep to the default Laravel MySQL database setup.
+
 ## System Requirements
 
 - PHP >= 7.3
@@ -30,6 +34,8 @@ composer require austintoddj/canvas
 ```
 
 Publish the assets and primary configuration file using the `canvas:install` Artisan command:
+
+NOTE: Before running the below command, please make sure your `.env` file is updated and using your prefered database driver. By default, canvas will use `sqlite` database to create a new user.
 
 ```bash
 php artisan canvas:install
